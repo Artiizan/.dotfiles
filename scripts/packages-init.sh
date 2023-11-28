@@ -6,10 +6,15 @@ sudo apt update && sudo apt install -y nala
 # update pacakge library and current packages
 sudo nala upgrade -y
 
+##### Terminal setup #####
+
+sudo add-apt-repository universe
+
 # install terminal packages
 sudo nala install -y \
 zsh neofetch \
-python3-dev python3-pip python3-setuptools \
+fonts-firacode \
+python3-dev python3-pip python3-setuptools
 
 # install spaceship-prompt
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
