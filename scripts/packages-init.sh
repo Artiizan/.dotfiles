@@ -12,8 +12,8 @@ sudo add-apt-repository universe
 
 # install terminal packages
 sudo nala install -y \
-zsh neofetch \
-fonts-firacode \
+zsh neofetch fonts-firacode \
+micro \
 python3-dev python3-pip python3-setuptools
 
 # install spaceship-prompt
