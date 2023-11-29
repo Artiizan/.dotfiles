@@ -12,20 +12,16 @@ You must have `sudo` privileges to install new packages
 ## Usage
 
 ### Fresh init
+
+#### First install packages
 ```
 # Make sure to double-check that the contents of the curl are what you expect before running with `sudo`
-curl https://raw.githubusercontent.com/Artiizan/dotfiles/blob/main/scripts/init.sh | sudo bash
+curl https://raw.githubusercontent.com/Artiizan/dotfiles/main/scripts/packages-init.sh | sudo bash
 ```
 
-#### Only install packages
+#### Then init configuration
 ```
-# Make sure to double-check that the contents of the curl are what you expect before running with `sudo`
-curl https://raw.githubusercontent.com/Artiizan/dotfiles/blob/main/scripts/packages-init.sh | sudo bash
-```
-
-#### Only init configuration
-```
-curl https://raw.githubusercontent.com/Artiizan/dotfiles/blob/main/scripts/config-init.sh | bash
+curl https://raw.githubusercontent.com/Artiizan/dotfiles/main/scripts/config-init.sh | bash
 ```
 
 ## Sources
