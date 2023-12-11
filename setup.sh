@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Install for dockerized development environments
 
+sudo apt update && \
 sudo apt install -y \
   curl \
   gpg \
