@@ -5,6 +5,9 @@
 python3 -m pip install --user ansible
 python3 -m pip install --user yamllint
 
+# ansible requirements
+python3 -m pip install --user jmespath
+
 # 1password cli
 sudo -s curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/$(dpkg --print-architecture) stable main" |
