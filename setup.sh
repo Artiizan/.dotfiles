@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
 # Install for dockerized development environments
 
-sudo apt update
-sudo DEBIAN_FRONTEND="noninteractive" apt install -y --no-install-recommends gnupg software-properties-common wget
+sudo apt-get update
+sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \
+    gnupg \
+    python3 \
+    python3-pip \
+    software-properties-common \
+    wget
 
 # terraform
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-sudo apt update
-sudo DEBIAN_FRONTEND="noninteractive" apt install -y terraform
+sudo apt-get update
+sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y terraform
 
 # ansible
 python3 -m pip install --user ansible
