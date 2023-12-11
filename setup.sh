@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Install for dockerized development environments
 
 # preseed for tzdata
 sudo apt update
@@ -11,26 +12,7 @@ sudo apt install -y nala --no-install-recommends
 sudo nala upgrade -y
 
 sudo nala install -y \
-git micro btop thefuck
-
-##### Terminal setup #####
-
-sudo add-apt-repository universe
-sudo apt update
-
-# install terminal packages
-sudo nala install -y \
-zsh neofetch fonts-firacode
-
-# install spaceship-prompt
-sudo git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-# install starship
-curl -sS https://starship.rs/install.sh | sudo sh -y
-
-# install autosuggestions for zsh
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git thefuck
 
 # install development dependencies
 
@@ -48,5 +30,3 @@ terraform
 
 # ansible
 python3 -m pip install --user ansible
-
-chsh -s $(which zsh)
