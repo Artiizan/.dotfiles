@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
-export DEBIAN_FRONTEND=noninteractive
+# preseed for tzdata
+export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
+echo "tzdata tzdata/Areas select Europe" >> /tmp/preseed.cfg
+echo "tzdata tzdata tzdata/Zones/Europe select London" >> /tmp/preseed.cfg
+debconf-set-selections /tmp/preseed.cfg
+rm -f /etc/timezone /etc/localtime
+
+# set locale
+sudo locale-gen en_US.UTF-8
+sudo update-locale LANG=en_US.UTF-8
 
 # update apt sources and install nala
 sudo apt update && sudo apt install -y nala
