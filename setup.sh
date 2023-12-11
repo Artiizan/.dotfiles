@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export DEBIAN_FRONTEND=noninteractive
+
 # update apt sources and install nala
 sudo apt update && sudo apt install -y nala
 
