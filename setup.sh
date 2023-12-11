@@ -8,8 +8,10 @@ sudo apt install -y \
   python3 \
   python3-pip \
   wget
-
-# ansible
+  
+###############
+### ansible ###
+###############
 python3 -m pip install --user ansible
 python3 -m pip install --user yamllint
 
@@ -17,7 +19,17 @@ python3 -m pip install --user yamllint
 python3 -m pip install --user ansible-lint
 python3 -m pip install --user jmespath
 
-# 1password cli
+#################
+### terraform ###
+#################
+sudo apt install -y software-properties-common
+wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install -y terraform
+
+#####################
+### 1password cli ###
+#####################
 sudo -s curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/$(dpkg --print-architecture) stable main" |
 sudo tee /etc/apt/sources.list.d/1password.list
