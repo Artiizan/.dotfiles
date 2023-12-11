@@ -4,6 +4,7 @@
 sudo apt update && sudo apt install -y \
   curl \
   gpg \
+  lsb-release \
   python3 \
   python3-pip \
   wget
