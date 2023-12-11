@@ -2,10 +2,10 @@
 
 # preseed for tzdata
 sudo apt update
-sudo DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install tzdata -y
+sudo DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install tzdata -y --no-install-recommends
 
 # install nala
-sudo apt install -y nala
+sudo apt install -y nala --no-install-recommends
 
 # update pacakge library and current packages
 sudo nala upgrade -y
@@ -23,14 +23,14 @@ sudo nala install -y \
 zsh neofetch fonts-firacode
 
 # install spaceship-prompt
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+sudo git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 # install starship
-curl -sS https://starship.rs/install.sh | sh -y
+curl -sS https://starship.rs/install.sh | sudo sh -y
 
 # install autosuggestions for zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # install development dependencies
 
