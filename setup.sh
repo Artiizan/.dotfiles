@@ -3,7 +3,7 @@
 
 sudo apt-get update
 sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \
-    gnupg \
+    gpg \
     python3 \
     python3-pip \
     software-properties-common \
