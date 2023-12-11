@@ -5,15 +5,6 @@
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install tzdata -y --no-install-recommends
 
-# install nala
-sudo apt install -y nala --no-install-recommends
-
-# update pacakge library and current packages
-sudo nala upgrade -y
-
-sudo nala install -y \
-git thefuck
-
 # install development dependencies
 
 # terraform
@@ -24,7 +15,7 @@ sudo apt-add-repository “deb [arch=$(dpkg — print-architecture)] https://apt
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 
-sudo nala install -y \
+sudo apt install -y \
 software-properties-common gnupg2 python3 \
 terraform
 
