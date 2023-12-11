@@ -2,7 +2,7 @@
 # Install for dockerized development environments
 
 sudo apt update
-sudo apt install -y gnupg software-properties-common wget
+sudo apt install -y --no-install-recommends gnupg software-properties-common wget
 
 # terraform
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
