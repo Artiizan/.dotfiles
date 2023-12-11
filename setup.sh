@@ -6,6 +6,7 @@ python3 -m pip install --user ansible
 python3 -m pip install --user yamllint
 
 # ansible requirements
+python3 -m pip install --user ansible-lint
 python3 -m pip install --user jmespath
 
 # 1password cli
