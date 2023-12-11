@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # Install for dockerized development environments
 
+sudo apt install -y \
+  curl \
+  gpg \
+  python3 \
+  python3-pip \
+  wget
+
 # ansible
 python3 -m pip install --user ansible
 python3 -m pip install --user yamllint
