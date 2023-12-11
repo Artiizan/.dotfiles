@@ -25,7 +25,7 @@ git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 # install starship
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -y
 
 # install autosuggestions for zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -44,12 +44,6 @@ software-properties-common python3 \
 terraform 
 
 # ansible
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3 get-pip.py --user
 python3 -m pip install --user ansible
 
-# terraform
-
-# overwrite the zsh config with ours for first run
-curl https://raw.githubusercontent.com/Artiizan/dotfiles/main/scripts/config-init.sh | bash
 chsh -s $(which zsh)
