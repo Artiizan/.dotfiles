@@ -11,6 +11,5 @@ sudo apt update
 sudo apt install -y terraform
 
 # ansible
-sudo apt install -y python3
 python3 -m pip install --user ansible
 python3 -m pip install --user yamllint
