@@ -2,12 +2,7 @@
 # Install for dockerized development environments
 
 sudo apt-get update
-sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \
-    gpg \
-    python3 \
-    python3-pip \
-    software-properties-common \
-    wget
+sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends gpg 
 
 # terraform
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
