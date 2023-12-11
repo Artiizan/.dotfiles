@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 # preseed for tzdata
+sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install tzdata -y
 
-# update apt sources and install nala
-sudo apt update && sudo apt install -y nala
+# install nala
+sudo apt install -y nala
 
 # update pacakge library and current packages
 sudo nala upgrade -y
